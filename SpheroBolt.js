@@ -3,7 +3,7 @@
 //Project:Spherp Bolt
 
 // Hello world program
-async function startProgram() {
+async function helloworld() {
 	await speak("Hello World", true);
 	setMainLed({ r: 255, g: 0, b: 0});
 	setSpeed(60);
@@ -25,5 +25,6 @@ async function ninetyDegree() {
  * startProgram function sends the program to your Sphero Bolt
 */
 async function startProgram() {
+	await helloworld()// speaking hello world
 	await ninetyDegree()//<-- calling the ninetyDegree function to sun it
 }
