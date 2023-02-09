@@ -2,6 +2,12 @@
 //Date:2.6.2023
 //Project:Spherp Bolt
 
+/**
+ * hello wprld practice program
+ * led trun coler
+ * forward for 2 secons a speed of 60
+ */
+
 // Hello world program
 async function helloworld() {
 	await speak("Hello World", true);
@@ -28,3 +34,7 @@ async function startProgram() {
 	await helloworld()// speaking hello world
 	await ninetyDegree()//<-- calling the ninetyDegree function to sun it
 }
+/**
+ 
+
+*/
