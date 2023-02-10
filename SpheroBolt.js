@@ -31,16 +31,6 @@ async function oneeightyDegree()() {
 	await delay(1);
 	await roll((getHeading() + 180), 60, 4); // heading 180 degrees at 60 speed for 4 seconds
 }
-
-/**
- * startProgram function sends the program to your Sphero Bolt
-*/
-async function startProgram() {
-	await helloworld()// speaking hello world
-	await ninetyDegree()//<-- calling the ninetyDegree function to sun it
-	await oneeightyDegree()//calling the oneeightyDegree function to sun it
-}
-
 async function helloSquare() {
 
 	setMainLed({ r: 105, g: 40, b: 10 });
@@ -60,5 +50,17 @@ async function helloSquare() {
 		await delay(1);
 
 	}
-
 }
+async function onetwentyDegree() {
+	await roll((getHeading() + 120), 5, 4); // heading 180 degrees at 5 speed for 4 seconds
+/**
+ * startProgram function sends the program to your Sphero Bolt
+*/
+async function startProgram() {
+	await helloworld()// speaking hello world
+	await ninetyDegree()//<-- calling the ninetyDegree function to sun it
+	await oneeightyDegree()//calling the oneeightyDegree function to sun it
+	await onetwentyDegree()//calling the onetwentyDegree function to sun it
+}
+
+
