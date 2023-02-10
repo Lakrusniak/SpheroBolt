@@ -3,7 +3,7 @@
 //Project:Spherp Bolt
 
 /**
- * hello wprld practice program
+ * hello wprld practice pm,rogram
  * led trun coler
  * forward for 2 secons a speed of 60
  */
@@ -21,10 +21,15 @@ async function helloworld() {
  * pausing, turning 90degrees clockwise then moving forward for a specific amount
  * of speed and time
 */
-async function ninetyDegree() {
+async function oninetyDegree() {
 	await roll((getHeading() + 0), 60, 4); // Heading 0 degrees at 60 speed for 4 seconds
 	await delay(1);
 	await roll((getHeading() + 90), 60, 4); // heading 90 degrees at 60 speed for 4 seconds
+}
+async function oneeightyDegree()() {
+	await roll((getHeading() + 0), 40, 4); // Heading 0 degrees at 60 speed for 4 seconds
+	await delay(1);
+	await roll((getHeading() + 180), 60, 4); // heading 180 degrees at 60 speed for 4 seconds
 }
 
 /**
@@ -33,8 +38,27 @@ async function ninetyDegree() {
 async function startProgram() {
 	await helloworld()// speaking hello world
 	await ninetyDegree()//<-- calling the ninetyDegree function to sun it
+	await oneeightyDegree()//calling the oneeightyDegree function to sun it
 }
-/**
- 
 
-*/
+async function helloSquare() {
+
+	setMainLed({ r: 105, g: 40, b: 10 });
+
+	await speak("hello square", true);
+
+	await delay(1);
+
+	for (var _i1 = 0; _i1 < 4; _i1++) {
+
+		setMainLed(getRandomColor());
+
+		await Sound.Animal.Monkey.play(true);
+
+		await roll((getHeading() + 90), 60, 1);
+
+		await delay(1);
+
+	}
+
+}
