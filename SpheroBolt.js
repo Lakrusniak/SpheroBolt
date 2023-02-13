@@ -1,3 +1,3 @@
-//Programmer:Landon Krusniak
-//Date:2.6.2023
-//Project:Spherp Bolt
+//Programmer Team :Landon Krusniak, Gavin Butcher
+//Date:2.13.2023
+//Project:Spherp Bolt Maz
