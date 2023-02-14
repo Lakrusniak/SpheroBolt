@@ -21,12 +21,24 @@ async function oninetyDegree1() {
 	await delay(1);
 	await roll((getHeading() + 90), 50, 2); // heading 90 degrees at 60 speed for 4 seconds
 }
+async function onenetyDegree2() {
 
+	await setMainLed({ r: 0, g: 0, b: 255});
+
+	await roll((getHeading() + 0), 60, 1); // Heading 0 degrees at 60 speed for 2 seconds
+
+	await delay(1);
+
+	await roll((getHeading() + 90), 60, 1); // heading 90 degrees at 60 speed for 2 seconds
+	await Sound.Animal.Pigeon.play(true);
+}
 
 /**
  * startProgram function sends the program to your Sphero Bolt Maze Comp
 */
 async function startProgram() {
 	await StartMaze()
-	 
+	await oninetyDegree1()
+	await onenetyDegree2()
+
 }
