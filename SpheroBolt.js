@@ -34,10 +34,11 @@ async function red(){
     await roll ((getHeading() + 0), 25, 2)
 }
 async function sound2(){
-    	await roll ((getHeading() + 0), 38, 2)
-    	await spin (45,2)
-    	await roll ((getHeading() + 0), 42, 2)
-
+    await spin(270,2)
+    await roll ((getHeading() + 0), 42, 2)
+    await spin(90, 2)
+    await roll ((getHeading() + 0), 27, 2)
+    await Sound.Effects.JokeDrum.play(true);
 }
 
 /**
