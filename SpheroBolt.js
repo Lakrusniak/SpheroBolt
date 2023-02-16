@@ -40,6 +40,13 @@ async function sound2(){
     await roll ((getHeading() + 0), 27, 2)
     await Sound.Effects.JokeDrum.play(true);
 }
+async function green(){
+    await spin(45, 2)
+    await roll ((getHeading() + 0), 31, 2)
+    await spin(270, 2)
+    setMainLed({ r: 0, g: 225, b: 0 })
+    await roll ((getHeading() + 0), 32, 2)
+}
 
 /**
  * startProgram function sends the program to your Sphero Bolt Maze Comp
