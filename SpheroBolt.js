@@ -13,42 +13,46 @@ async function oninetyDegree1() {
 	    await roll ((getHeading() + 0), 73, 2)
 	    await spin(90, 2)
 	    setMainLed({ r: 0, g: 0, b: 255 })
+	    await delay(1);
 	
 }
 async function onenetyDegree2() {
 	await setMainLed({ r: 0, g: 0, b: 255});
-	await roll((getHeading() + 0), 60, 1); // Heading 0 degrees at 60 speed for 2 seconds
+	await roll((getHeading() + 0), 49, 2); // Heading 0 degrees at 60 speed for 2 seconds
 	await delay(1);
-	await roll((getHeading() + 90), 60, 1); // heading 90 degrees at 60 speed for 2 seconds
+	await roll((getHeading() + 90), 56, 1); // heading 90 degrees at 60 speed for 2 seconds
 	await Sound.Animal.Pigeon.play(true);
+	await delay(1);
 }
 async function red(){
     await spin(40, 2)
-    await roll ((getHeading() + 0), 40, 2)
-    await spin(270, 2)
-    setMainLed({ r: 255, g: 0, b: 0 })
-    await roll ((getHeading() + 0), 25, 2)
+    await roll(217, 56.1, 1);
+    await delay(2);
+    await roll(132, 40.7, 1);
+    await setMainLed({ r: 255, g: 0, b: 0})
+    await delay(2);
 }
 async function sound2(){
-    await spin(270,2)
-    await roll ((getHeading() + 0), 42, 2)
-    await spin(90, 2)
-    await roll ((getHeading() + 0), 27, 2)
-    await Sound.Effects.JokeDrum.play(true);
+    await roll(42, 55.7, 1);
+    await delay(1);
+    await roll(130, 35.7, 1);
+    await Sound.animal.cow.play(true);
 }
 async function green(){
-    await spin(45, 2)
-    await roll ((getHeading() + 0), 30.6, 2)
-    await spin(270, 2)
-    setMainLed({ r: 0, g: 255, b: 0 })
-    await roll ((getHeading() + 0), 32, 2)
+   await delay(1);
+      await roll(180, 43.5, 1);
+      await delay(1.5);
+      setMainLed({ r: 0, g: 255, b: 0})
+      await roll(89, 29 , 1);
 }
 async function sound3(){
-    await spin(270, 2)
-    await roll ((getHeading() + 0), 215, 2)
-    await spin(45, 2)
-    await roll ((getHeading() + 0), 215, 2)
-    await Sound.Animal.Cat.play()
+    await roll(89.5, 40, 1.1);
+    await delay(2);
+    await roll(0, 45, 1);
+    await delay(2);
+    await roll(315, 46, 1);
+    await Sound.Animal.Dog.play(true);
+    await delay(2);
 }
 
 /**
