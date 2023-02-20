@@ -55,9 +55,10 @@ async function sound3(){
  * startProgram function sends the program to your Sphero Bolt Maze Comp
 */
 async function startProgram() {
-	
 	await oninetyDegree1()
 	await onenetyDegree2()
 	await red()
-
+	await sound2()
+	await green()
+	await sound3()
 }
